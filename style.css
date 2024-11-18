@@ -1,0 +1,436 @@
+/* Developer By Michael Sitanggang */
+/* Global Styles */
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: skyblue;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo-title {
+  display: flex;
+  align-items: center;
+}
+
+.navbar img {
+  margin-right: 15px; /* Jarak antara logo dan judul */
+  width: 60px;
+  height: 60px;
+}
+
+.navbar h2 {
+  font-size: 24px;
+  color: white;
+  margin: 0;
+}
+
+/* Main Header Styles */
+.main-header {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.main-header .main-logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.main-header h1 {
+  font-size: 32px;
+  margin-top: 10px;
+}
+
+.main-header p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Make sure the buttons are centered vertically */
+  gap: 15px;
+  flex-wrap: wrap; /* Ensure buttons wrap on smaller screens */
+  margin-top: 20px; /* Optional margin for spacing */
+}
+
+.buttons a {
+  color: black;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: white;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.buttons i {
+  margin-right: 8px;
+  font-size: 24px;
+}
+
+.buttons a:hover {
+  background-color: skyblue;
+}
+
+.buttons a:nth-child(1) i {
+  color: #C13584; /* Warna ikon Instagram */
+}
+
+.buttons a:nth-child(2) i {
+  color: red; /* Warna ikon Youtube */
+}
+
+/* Leadership Section */
+.leadership {
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+}
+
+#typing-content {
+  font-weight: bold;
+  padding: 10px;
+  font-size: 16px;
+  color: black;
+  white-space: pre-line;
+  overflow: hidden;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+/* Content Section */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 300px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-info {
+  padding: 10px;
+}
+
+.card-info h3 {
+  margin: 10px 0;
+}
+
+.card-info p {
+  color: #555;
+}
+
+button {
+  padding: 10px 20px;
+  color: white;
+  background-color: skyblue;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .navbar h2 {
+    font-size: 20px;
+  }
+
+  .main-header h1 {
+    font-size: 28px;
+  }
+
+  .content {
+    gap: 15px;
+  }
+
+  .card {
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar img {
+    margin-bottom: 10px;
+  }
+
+  .main-header .main-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .main-header h1 {
+    font-size: 24px;
+  }
+
+  .main-header p {
+    font-size: 16px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center; /* Align buttons in center for mobile */
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar h2 {
+    font-size: 18px;
+  }
+
+  .main-header h1 {
+    font-size: 22px;
+  }
+
+  .buttons a {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 95%;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+
+/* Styling untuk section events */
+#events {
+  padding: 50px 0;
+  background-color: #f0f0f0;
+}
+
+.event h3 {
+  text-align: center;
+}
+#events .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+#events h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Styling grid untuk event */
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.event {
+  background-color: #e9ecef;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.event h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: black;
+  font-weight: bold;
+}
+
+.event p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  #events h2 {
+      font-size: 28px;
+  }
+
+  .event {
+      padding: 15px;
+  }
+
+  .event h3 {
+      font-size: 22px;
+  }
+
+  .event p {
+      font-size: 14px;
+  }
+}
+
+
+/* Styling untuk section contact */
+#contact {
+  background-color: #f8f9fa;
+  font-family: 'Arial', sans-serif;
+}
+
+#contact .container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: skyblue;
+  font-weight: 600;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contact input,
+#contact textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  border-color: skyblue;
+}
+
+#contact input::placeholder,
+#contact textarea::placeholder {
+  color: #888;
+}
+
+#contact textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+#contact button {
+  padding: 12px 20px;
+  font-size: 18px;
+  background-color: skyblue;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+  background-color: skyblue;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  #contact h2 {
+      font-size: 30px;
+  }
+
+  #contact .container {
+      padding: 20px;
+  }
+
+  #contact form {
+      gap: 12px;
+  }
+
+  #contact input,
+  #contact textarea {
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  #contact button {
+      font-size: 16px;
+      padding: 10px 15px;
+  }
+}
+
+
+/* Animasi fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Ketika elemen muncul di viewport */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
